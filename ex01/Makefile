@@ -6,13 +6,13 @@
 #    By: araveala <araveala@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/10 12:34:31 by araveala          #+#    #+#              #
-#    Updated: 2024/12/10 15:54:52 by araveala         ###   ########.fr        #
+#    Updated: 2024/12/10 15:58:29 by araveala         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Werror -Wextra -Wall -std=c++11 -MMD -MP
-CPPFILES = main.cpp ClapTrap.cpp
+CPPFILES = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 BUILDDIR = buildofiles/
 OFILES = $(addprefix $(BUILDDIR), $(CPPFILES:.cpp=.o))
