@@ -6,17 +6,30 @@
 /*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:29 by araveala          #+#    #+#             */
-/*   Updated: 2025/01/06 13:42:34 by shaboom          ###   ########.fr       */
+/*   Updated: 2025/01/06 17:22:52 by shaboom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
+/**
+ * @brief running multiple tests to show work. Diamond trap creates a scavtrap and fragtrap sharing 1 claptrap
+ * this leads to constructor carrying the parameter given to diamondtraps name as names for scav and frag trap,
+ * however as neither have their own variable for name , as usually they have their own subobject of claptrap,
+ * the destructor will show that scav/fragtrap "*"+"_clap_name" is being destroyed. 
+ * 
+ * @return int 
+ */
 int main()
 {
-    ClapTrap steve = ClapTrap("steve");
+	DiamondTrap wow = DiamondTrap("wow");
+    wow.ShowValues();
+	wow.whoAmI();
+	wow.attack("ranodm stranger ");
+	ClapTrap steve = ClapTrap("steve");
 	steve.ShowValues();
     ScavTrap bob = ScavTrap("bob");
 	bob.ShowValues();
