@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: araveala <araveala@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:29 by araveala          #+#    #+#             */
-/*   Updated: 2024/12/10 16:11:53 by araveala         ###   ########.fr       */
+/*   Updated: 2025/01/06 12:14:33 by shaboom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,28 @@
 int main()
 {
     ClapTrap steve = ClapTrap("steve");
-    ScavTrap jay = ClapTrap("jay");
+	steve.ShowValues();
+    ScavTrap bob = ScavTrap("bob");
+	bob.ShowValues();
+
     steve.attack("bob");
-    steve.takeDamage(10);
-    steve.beRepaired(1);
-    steve.attack("bob");
+	bob.takeDamage(steve.getAttack());
+	steve.beRepaired(10);
+	steve.attack("bob");
+	bob.takeDamage(steve.getAttack());
+	
+	bob.attack("steve");
+	steve.takeDamage(bob.getAttack());
+	steve.attack("bob");
+	
+	std::cout<<"setting bobs energy to 0, that fish was heavy"<<std::endl;
+	bob.setEnergy(0);
+	bob.beRepaired(1);
+
+	bob.guardGate();
+	ScavTrap test("test");
+	test = bob;
+	test.ShowValues();
     return 0;
     
 }
