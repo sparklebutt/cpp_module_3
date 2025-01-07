@@ -6,7 +6,7 @@
 /*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:02:23 by araveala          #+#    #+#             */
-/*   Updated: 2025/01/06 18:14:47 by shaboom          ###   ########.fr       */
+/*   Updated: 2025/01/06 18:53:21 by shaboom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ ScavTrap::~ScavTrap() {std::cout<<"scav trap "<<getName()<<" destroyed"<<std::en
 
 void ScavTrap::attack(const std::string& target)
 {
+	
     if (getEnergy() <= 0 || getHitPoints() <= 0)
     {
         std::cout<<getName()<<" can not attack due to "       

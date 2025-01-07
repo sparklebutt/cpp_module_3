@@ -6,7 +6,7 @@
 /*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:02:35 by araveala          #+#    #+#             */
-/*   Updated: 2025/01/06 18:15:01 by shaboom          ###   ########.fr       */
+/*   Updated: 2025/01/06 18:53:32 by shaboom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ class ScavTrap : virtual public ClapTrap
         ~ScavTrap();
 		void attack(const std::string& target);
 		void guardGate();
-		
 };

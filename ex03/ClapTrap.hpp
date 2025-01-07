@@ -6,7 +6,7 @@
 /*   By: shaboom <shaboom@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:34:26 by araveala          #+#    #+#             */
-/*   Updated: 2025/01/06 18:11:36 by shaboom          ###   ########.fr       */
+/*   Updated: 2025/01/06 18:51:54 by shaboom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class ClapTrap
         int m_HitPoints = 10;
         int m_Energy = 10;
         int m_Attack = 0;
-	protected:
-		std::string getName();	
+	//protected:
+	
 	//	void attackMessage(const std::string& victim);
     public:
         ClapTrap();
@@ -51,6 +51,6 @@ class ClapTrap
 		int getEnergy();
 		int getAttack();
 		void ShowValues() const;
-
+		std::string getName();
 
 };
